@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo{
+    padding-left: 40px;
+    font-size: larger;
+}
+#planet-name {
+    color: white;
+    font-size: 200px;
+    font-family: "devil breeze";
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease-out forwards, glow 2s ease-in-out infinite alternate;
+}
+
+#know-more-btn:hover {
+    font-size: larger;
+}
+
+@import url('https://fonts.cdnfonts.com/css/devil-breeze');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/bimbo');
+
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #000000;
+    color: #eef8ce;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-size: 100%;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    padding-block: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10px;
+    backdrop-filter: blur(20px);
+    z-index: 100;
+    background-color: #1B1B1B11;
+    background-image: repeating-linear-gradient(to right, transparent 0 500px, #eee1 500px 501px);
+}
+
+
+#clickcele {
+    color: #d1ff48;
+    font-size: 20px;
+    font-family: "devil breeze";
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease-out forwards, glow 2s ease-in-out infinite alternate;
+}
+#planet-info #planet-name {
+    color: white;
+    font-size: 11em;
+    font-family: "devil breeze";
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease-out forwards, glow 2s ease-in-out infinite alternate;
+}
+
+#planet-info #planet-description {
+    color: #ffd700;
+    font-size: 25px;
+    font-family: "devil breeze";
+    font-weight: bold;
+    position: relative;
+    padding: 0 100px 0;
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    height: 50px;
+    top: 400px;
+    animation: fadeIn 2s ease-out 1s forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 2px white, 0 0 10px white;
+    }
+    to {
+        text-shadow: 0 0 3px white, 0 0 15px white;
+    }
+}
+
+#container3D {
+    z-index: 1;    
+}
+
+@media screen and (max-width: 767px) {
+    
+    #container3D {
+        position: absolute;
+    }
+}
