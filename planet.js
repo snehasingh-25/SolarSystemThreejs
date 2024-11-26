@@ -18,52 +18,52 @@ const planetData = {
     Object_56: {
         name: "Sun",
         description: "The Sun is the star at the center of our Solar System. It's a nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core. The Sun radiates energy in the form of light, ultraviolet, and infrared radiation.",
-        model: "/assets/models/sun.glb"
+        model: "/SolarSystemThreejs/assets/models/sun.glb"
     },
     Object_5: {
         name: "Mercury",
         description: "Mercury is the smallest and innermost planet in the Solar System. It has no natural satellites and no substantial atmosphere. The planet has a large iron core and thin mantle, giving it the highest density of all the planets after Earth.",
-        model: "/assets/models/mercury.glb"
+        model: "/SolarSystemThreejs/assets/models/mercury.glb"
     },
     Object_8: {
         name: "Venus",
         description: "Venus is the second planet from the Sun and is often called Earth's 'sister planet' due to their similar size and mass. It has a thick atmosphere that creates a strong greenhouse effect, making it the hottest planet in our Solar System.",
-        model: "/assets/models/venus.glb"
+        model: "/SolarSystemThreejs/assets/models/venus.glb"
     },
     Object_11: {
         name: "Earth",
         description: "Earth is the third planet from the Sun and the only astronomical object known to harbor life. It has one natural satellite, the Moon, and its atmosphere is rich in nitrogen and oxygen. Earth's surface is 71% covered in water.",
-        model: "/assets/models/earth.glb"
+        model: "/SolarSystemThreejs/assets/models/earth.glb"
     },
     Object_14: {
         name: "Mars",
         description: "Mars is the fourth planet from the Sun and is often called the 'Red Planet' due to its reddish appearance caused by iron oxide on its surface. It has two small moons, Phobos and Deimos, and features the largest volcano in the Solar System, Olympus Mons.",
-        model: "/assets/models/mars.glb"
+        model: "/SolarSystemThreejs/assets/models/mars.glb"
     },
     Object_17: {
         name: "Jupiter",
         description: "Jupiter is the largest planet in the Solar System and is a gas giant. It's known for its Great Red Spot, a giant storm that has been raging for at least 400 years. Jupiter has at least 79 moons, including the four large Galilean moons.",
-        model: "/assets/models/jupiter.glb"
+        model: "/SolarSystemThreejs/assets/models/jupiter.glb"
     },
     Object_20: {
         name: "Saturn",
         description: "Saturn is the sixth planet from the Sun and is famous for its prominent ring system, composed mainly of ice particles, rocky debris, and dust. It's another gas giant and has 82 confirmed moons, with Titan being the largest.",
-        model: "/assets/models/saturn2.glb"
+        model: "/SolarSystemThreejs/assets/models/saturn2.glb"
     },
     Object_25: {
         name: "Uranus",
         description: "Uranus is the seventh planet and is an ice giant. It's unique among the planets as it rotates on its side, likely due to a massive impact early in its history. It has 27 known moons and a faint ring system.",
-        model: "/assets/models/uranus.glb"
+        model: "/SolarSystemThreejs/assets/models/uranus.glb"
     },
     Object_28: {
         name: "Neptune",
         description: "Neptune is the eighth and farthest known planet from the Sun. It's an ice giant similar to Uranus and has 14 known moons. Its blue color comes from methane in its atmosphere, and it experiences the strongest winds of any planet in the Solar System.",
-        model: "/assets/models/neptune.glb"
+        model: "/SolarSystemThreejs/assets/models/neptune.glb"
     },
     Object_31: {
         name: "Pluto",
         description: "While no longer classified as a planet, Pluto is a dwarf planet in the Kuiper Belt. It has five known moons, with Charon being the largest. Its surface is composed mainly of frozen nitrogen, methane, and carbon monoxide.",
-        model: "/assets/models/pluto.glb"
+        model: "/SolarSystemThreejs/assets/models/pluto.glb"
     }
 };
 
@@ -128,7 +128,7 @@ if (planetName && planetData[planetName]) {
     }
 
     // Load environment map
-    new EXRLoader().load('/assets/models/sky4.exr', texture => {
+    new EXRLoader().load('/SolarSystemThreejs/assets/models/sky4.exr', texture => {
         texture.mapping = THREE.EquirectangularReflectionMapping;
         texture.encoding = THREE.LinearEncoding;
         texture.minFilter = texture.magFilter = THREE.LinearFilter;
@@ -161,7 +161,7 @@ if (planetName && planetData[planetName]) {
         camera.position.z = 7; // Increased from 5 to 7 to accommodate larger planet size
 
         // Load and position the additional 3D model (cute_astronaut.glb)
-        loader.load('/assets/models/cute_astronaut.glb', (gltf) => {
+        loader.load('/SolarSystemThreejs/assets/models/cute_astronaut.glb', (gltf) => {
             const astronaut = gltf.scene;
             astronaut.traverse((node) => {
                 if (node.isMesh) {
