@@ -39,7 +39,7 @@ lights.planet2.position.set(-50, 0, 0);
 Object.values(lights).forEach(light => scene.add(light));
 
 // Load environment map
-new EXRLoader().load('/assets/models/sky4.exr', texture => {
+new EXRLoader().load('public/assets/models/sky4.exr', texture => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
     texture.encoding = THREE.LinearEncoding;
     texture.minFilter = texture.magFilter = THREE.LinearFilter;
